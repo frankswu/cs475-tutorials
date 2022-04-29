@@ -10,3 +10,12 @@ The OpenGL version used is 3.3+
 
 Please look at the README files of the corresponding tutorials for more information.
 
+
+
+make 输出的编译脚本 修改 -lGL 变成 -framework OpenGL
+
+## 实际调用命令
+➜  /Users/frankswu/Documents/work/opengl_demo_workspace/cs475-tutorials/Tutorial_00 git:(test_demo) ✗ >make
+g++ -I/usr/local/include 00_glInit.cpp -o 00_glInit -L/usr/local/lib  -lGL -lGLEW -lglfw
+➜  /Users/frankswu/Documents/work/opengl_demo_workspace/cs475-tutorials/Tutorial_00 git:(test_demo) ✗ >g++ -I/usr/local/include 00_glInit.cpp -o 00_glInit -L/usr/local/lib   -lGLEW -lglfw -framework OpenGL
+
